@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nginx Docker 练习场</title>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<h1>Nginx Docker 练习场</h1>
+<p>如果你看到这个页面，说明容器内的 Nginx 已经正确托管了静态文件。</p>
+<h2>快速验证清单</h2>
+<ul>
+  <li><a href="/assets/app.js">/assets/app.js</a> — 静态资源（应有强缓存头）</li>
+  <li><a href="/some/spa/route">/some/spa/route</a> — SPA 路由（应回退到本页，URL 不变）</li>
+  <li><a href="/api/hello">/api/hello</a> — 反代测试（未启动后端时会 502，属预期）</li>
+</ul>
+<p>查看响应头：<code>curl -I http://localhost:8080/</code></p>
+</body>
+</html>
